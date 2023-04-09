@@ -77,9 +77,9 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
 
   1. AWS
         * [Intro AWS]()
-        * [S3]()
-        * [ec2]()
-        * [lambda]()  
+        * [AWS S3]()
+        * [AWS EC2]()
+        * [AWS Lambda]()  
         * [Challenge-01]() 
         * [Challenge-02]()
         * [Challenge-03]()   
@@ -114,7 +114,7 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
   1. Challenge Final
         * [Challenge onfire 🔥🔥]()
 
-  1. Recursos
+  1. Recursos & Material de Referentes DevOps
         * [Proximamente]() 
 
 
