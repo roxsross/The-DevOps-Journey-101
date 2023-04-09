@@ -120,8 +120,10 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
   1. Recursos & Material de Referentes DevOps
         * [Proximamente]() 
 
+_ _ _
 
-### 🔔 Importante: Se actualiza contenido a medida que avance el curso de DevOps 101
+#### 🔔 Importante: Se actualiza contenido a medida que avance el curso de DevOps 101
+_ _ _
 
 ## Contribuciones
 Como siempre, cualquier contribución es bienvenida, simplemente forkeá este repo y enviame una PR.  
