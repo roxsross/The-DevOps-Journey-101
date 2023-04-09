@@ -22,7 +22,18 @@ En su significado más amplio, DevOps es una cultura. Lo que se quiere conseguir
 
 - Customer first: Gracias a las metodologías agile esto es más sencillo que nunca, ya que al estar continuamente integrando y desplegando, los cambios en los gustos de los clientes pueden ser detectados rápidamente, adaptando la aplicación a ellos de forma rápida y ágil.
 
-### En mi III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a errores y se volverá automatizado, rápido y seguro.
+<a href="https://295devops.com">
+<img align="left" width="20%" src="https://raw.githubusercontent.com/roxsross/roxsross/main/images/Copia de ROXSROSS FINAL (1).png">
+</a>
+</br>
+</br>
+</br>
+En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a errores y se volverá automatizado, rápido y seguro.
+</br>
+</br>
+</br>
+</br>
+
 
 ### Contenidos && Challenge
 
