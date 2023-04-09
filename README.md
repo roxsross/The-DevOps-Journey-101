@@ -64,6 +64,8 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
         * [Challenge-01]() 
         * [Challenge-02]()
         * [Challenge-03]()  
+        * [Challenge-04]() 
+        * [Challenge-05]() 
       
   1. Kubernetes
         * [Kubernetes]()
@@ -112,7 +114,8 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
 
 
   1. Challenge Final
-        * [Challenge onfire 🔥🔥]()
+        * [Challenge onfire v1 🔥🔥]()
+        * [Challenge onfire v2 🔥🔥]()
 
   1. Recursos & Material de Referentes DevOps
         * [Proximamente]() 
