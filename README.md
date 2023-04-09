@@ -8,9 +8,10 @@
 
 ### Contenidos && Challenge
 
- 1. Roadmap DevOps
+  1. Roadmap DevOps
         * [Intro DevOps]()
         * [Intro DevOps]()
+    
   1. Linux Básico 
         * [Linux]()
         * [Comandos Basicos]()
