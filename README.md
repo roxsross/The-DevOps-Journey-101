@@ -115,7 +115,7 @@ Como siempre, cualquier contribución es bienvenida, simplemente forkeá este re
 ### **Puedes Seguirme** 🔥 &nbsp;
 [![Website Roxs](https://img.shields.io/badge/-roxsross-blue?style=flat&logo=GoogleChrome&logoColor=white&link=https://295devops.com)](https://roxs.295devops.com)
 [![Discord](https://img.shields.io/discord/729672926432985098?style=social&label=Discord&logo=discord)](https://discord.gg/5fqHuBq6pf)
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCxPD7bsocoAMq8Dj18kmGyQ?style=social)](https://www.youtube.com/channel/UCa-FcaB75ZtqWd1YCWW6INQ?sub_confirmation=1)
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCxPD7bsocoAMq8Dj18kmGyQ?style=social)](https://www.youtube.com/@295devops)
 [![Twitter Follow](https://img.shields.io/twitter/follow/roxsross?style=social)](https://twitter.com/roxsross)
 ![GitHub Followers](https://img.shields.io/github/followers/roxsross?style=social)
 ![GitHub Followers](https://img.shields.io/github/stars/roxsross?style=social)
