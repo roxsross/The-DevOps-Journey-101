@@ -8,7 +8,7 @@
 ### ¿Pero qué es DevOps? 
 DevOps es un término surgido de la combinación de “desarrollo” y “operaciones” (en inglés development y operations) que representa una filosofía de ingeniería que consiste en el enfoque colaborativo entre el equipo de (Dev) desarrollo de software y el de (Ops) operación del software. 
 
-En su significado más amplio, DevOps es una cultura. Lo que se quiere conseguir con este tipo de metodología es aumentar la comunicación y confianza entre los desarrolladores y los administradores de sistemas, es decir, integrar los departamentos de operaciones y desarrollo.
+En su significado más amplio, DevOps es una cultura. Lo que se quiere conseguir es aumentar la comunicación y confianza entre los desarrolladores y los administradores de sistemas, es decir, integrar los departamentos de operaciones y desarrollo.
 
 ### Ventajas de utilizar DevOps
 
