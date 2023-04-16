@@ -1,0 +1,16 @@
+#!/bin/bash
+#Ejemplo 23: funciones con parámetros
+ 
+function salir { 
+	exit 0
+} 
+
+function escribe { 
+	echo $1 
+} 
+
+escribe Hola 
+escribe Mundo 
+salir 
+echo "esta línea no se ejecuta"
+

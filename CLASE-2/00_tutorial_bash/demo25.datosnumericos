@@ -1,0 +1,9 @@
+#!/bin/bash
+#Ejemplo 25: procesar datos numéricos
+
+echo "Introduzca el radio de una circunferencia"
+read radio
+let "PI=3,1416"
+echo "CUIDADO: Los siguientes datos no son fiables:"
+echo "La longitud de la circunferencia es $((2*PI*radio))"
+echo "El área de la circunferencia es $((PI * radio**2))"

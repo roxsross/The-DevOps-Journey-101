@@ -27,8 +27,8 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
 ### Contenidos && Challenge
 
   1. Roadmap DevOps
-        * [Intro DevOps]()
-        * [Intro DevOps]()
+        * [Intro DevOps](./CLASE-1/devops.md)
+
     
   1. Linux Básico 
         * [Linux]()
