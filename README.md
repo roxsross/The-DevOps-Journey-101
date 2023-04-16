@@ -31,12 +31,12 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
 
     
   1. Linux Básico 
-        * [Linux]()
-        * [Comandos Basicos]()
-        * [Bash]()
-        * [Challenge-01]() 
-        * [Challenge-02]()
-        * [Challenge-03]()  
+        * [Linux](./CLASE-2/linux.md)
+        * [Comandos Basicos](./CLASE-2/comandos_linux.properties)
+        * [Bash](./CLASE-2/00_tutorial_bash/readme.md)
+        * [Challenge-01](./CLASE-2/05-example/reto1.md) 
+        * [Challenge-02](./CLASE-2/05-example/reto2.md)
+        * [Challenge-03](./CLASE-2/05-example/reto3.md)  
 
   1. Sistema de Control de Version
         * [Git]()

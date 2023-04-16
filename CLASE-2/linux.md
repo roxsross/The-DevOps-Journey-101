@@ -1,3 +1,6 @@
+# Linux
+<p align="center"><img src="../assets/linux.png" width="600"/></p>
+
 # Linux en DevOps
 
 Linux es el sistema operativo open-source más popular en el mundo. Su capacidad para su personalización y poder de ser realmente modificable para las exigencias únicas de software y aplicaciones no tiene par. Aparte de su legendaria estabilidad, manejo súper eficiente de recursos de memoria, procesadores y almacenamiento; sus diferentes tipos de distribuciones para cada escenario lo hacen un elemento imprescindible para albergar las más exigentes y peculiares aplicaciones o plataformas de software.
@@ -39,10 +42,20 @@ Muchas Herramientas poderosas DevOps usan Linux como base integral de su tecnolo
 Existen hoy por hoy dos vertientes principales de Linux que tienen ya muchos años de estar en el entorno IT y son reconocidas mundialmente: la vertiente Red Hat y la vertiente Debian. Red Hat y Debian son Sistemas Operativos Linux que son muy famosos, son legendariamente estables.
 
 En base a estas vertientes se han dado Distribuciones de Linux que se derivan de estas y tienen una presencia muy grande en todo tipo de infraestructuras, además de un soporte técnico y comunidades muy fuertes.
+---
+# Recursos
 
+- [00_tutorial_bash](./00_tutorial_bash/readme.md)
+- [01-entornos-linux](./01-entornos-linux/00-sistema-de-ficheros.md)
+- [02-trabajando-con-la-cli](./02-trabajando-con-la-cli/00-comandos-basicos.md)
+- [03-network-connectivity](./03-network-connectivity/00-comandos-de-red.md)
+- [04-administracion-del-sistema](./04-administracion-del-sistema/00-usuarios-y-grupos.md)
 
-Material complementario: 
+---
+### Material complementario: 
 - [Instalar VM] (https://www.youtube.com/watch?v=XfCaHcOdBL8)
 - [Comandos basicos de linux] (https://www.youtube.com/watch?v=0BA4k3jweaE)
 - [Curso terminal y linea de comandos](https://www.youtube.com/watch?v=3gRhwwkeiog)
 - [Bash](https://www.youtube.com/watch?v=4_ub6614dwY)
+
+Nos vemos en la siguiente clase.
