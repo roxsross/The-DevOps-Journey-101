@@ -1,5 +1,5 @@
 # DevOps
-<p align="center"><img src="./assets/pngegg.png" width="600"/></p>
+<p align="center"><img src="../assets/pngegg.png" width="600"/></p>
 
 ### ¿Pero qué es DevOps? 
 DevOps es un término surgido de la combinación de “desarrollo” y “operaciones” (en inglés development y operations) que representa una filosofía de ingeniería que consiste en el enfoque colaborativo entre el equipo de (Dev) desarrollo de software y el de (Ops) operación del software. 
