@@ -36,9 +36,9 @@ En resumen, el CI/CD permite a los equipos de DevOps validar y entregar con frec
 
 ---
 ### Referentes DevOps:
-- [Nana] https://www.youtube.com/watch?v=0yWAtQ6wYNM&list=PLy7NrYWoggjwV7qC4kmgbgtFBsqkrsefG
-- https://github.com/bregman-arie/devops-exercises.git
-- https://github.com/MichaelCade/90DaysOfDevOps
-
+- [Nana](https://www.youtube.com/watch?v=0yWAtQ6wYNM&list=PLy7NrYWoggjwV7qC4kmgbgtFBsqkrsefG)
+- [bregman-arie](https://github.com/bregman-arie/devops-exercises.git)
+- [MichaelCade](https://github.com/MichaelCade/90DaysOfDevOps)
+- [Pelado Nerd](https://www.youtube.com/@PeladoNerd)
 ---
 Nos vemos en la siguiente clase.
