@@ -1,5 +1,5 @@
 # Linux
-<p align="center"><img src="../assets/linux.png" width="600"/></p>
+<p align="center"><img src="../assets/linux.png" width="400"/></p>
 
 # Linux en DevOps
 
