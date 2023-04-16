@@ -54,8 +54,8 @@ En base a estas vertientes se han dado Distribuciones de Linux que se derivan de
 
 ---
 ### Material complementario: 
-- [Instalar VM] (https://www.youtube.com/watch?v=XfCaHcOdBL8)
-- [Comandos basicos de linux] (https://www.youtube.com/watch?v=0BA4k3jweaE)
+- [Instalar VM](https://www.youtube.com/watch?v=XfCaHcOdBL8)
+- [Comandos basicos de linux](https://www.youtube.com/watch?v=0BA4k3jweaE)
 - [Curso terminal y linea de comandos](https://www.youtube.com/watch?v=3gRhwwkeiog)
 - [Bash](https://www.youtube.com/watch?v=4_ub6614dwY)
 
