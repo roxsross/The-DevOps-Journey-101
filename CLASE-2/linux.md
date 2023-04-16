@@ -42,6 +42,7 @@ Muchas Herramientas poderosas DevOps usan Linux como base integral de su tecnolo
 Existen hoy por hoy dos vertientes principales de Linux que tienen ya muchos años de estar en el entorno IT y son reconocidas mundialmente: la vertiente Red Hat y la vertiente Debian. Red Hat y Debian son Sistemas Operativos Linux que son muy famosos, son legendariamente estables.
 
 En base a estas vertientes se han dado Distribuciones de Linux que se derivan de estas y tienen una presencia muy grande en todo tipo de infraestructuras, además de un soporte técnico y comunidades muy fuertes.
+
 ---
 # Recursos
 
