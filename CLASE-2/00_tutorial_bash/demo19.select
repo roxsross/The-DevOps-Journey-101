@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 #Ejemplo : uso de la construcción select
 
 opciones="Entrar Salir"
