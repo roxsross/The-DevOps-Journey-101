@@ -1,3 +1,5 @@
+## Ejercicios Scripts Linux 
+
 20. Crea un script que reciba como parámetro la ruta a un fichero y que nos
 indique si tiene permisos de ejecución.
 
