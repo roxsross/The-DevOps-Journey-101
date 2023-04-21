@@ -36,7 +36,11 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
         * [Bash](./CLASE-2/00_tutorial_bash/readme.md)
         * [Challenge-01](./CLASE-2/05-example/reto1.md) 
         * [Challenge-02](./CLASE-2/05-example/reto2.md)
-        * [Challenge-03](./CLASE-2/05-example/reto3.md)  
+        * [Challenge-03](./CLASE-2/05-example/reto3.md)
+        * [Ejercicios-1](./CLASE-2/ejercicios-scripts-linux-1.md)
+        * [Ejercicios-2](./CLASE-2/ejercicios-scripts-linux-2.md)  
+        * [Ejercicios-3](./CLASE-2/ejercicios-scripts-linux-3.md)  
+        * [Ejercicios-4](./CLASE-2/ejercicios-scripts-linux-4.md)    
 
   1. Sistema de Control de Version
         * [Git]()
