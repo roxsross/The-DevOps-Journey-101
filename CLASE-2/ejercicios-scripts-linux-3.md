@@ -45,19 +45,19 @@ Eva;6;300;63
 Ana;7;200;42
 Pablo;8;400;84
 ```
-    La exportación a formato csv ha creado una línea por fila de la tabla, y
-    cada columna separada por el carácter “;”. 
+
+La exportación a formato csv ha creado una línea por fila de la tabla, y
+cada columna separada por el carácter “;”. 
     
-    La columna 1 es el nombre del cliente, la columna 2 el número de
-    factura, la columna 3 la base imponible de la factura y la columna 4 la
-    cuota de IVA.
+La columna 1 es el nombre del cliente, la columna 2 el número de
+factura, la columna 3 la base imponible de la factura y la columna 4 la cuota de IVA.
     
-    Crea un script “facturas1” que muestre en pantalla cuántas facturas
-    tiene dentro del archivo “facturas.csv” el cliente cuyo nombre se pase
-    como parámetro.
+Crea un script “facturas1” que muestre en pantalla cuántas facturas
+tiene dentro del archivo “facturas.csv” el cliente cuyo nombre se pase
+como parámetro.
     
-    Lógicamente, el script debe verificar que se pasa un parámetro y que el
-    archivo facturas.csv existe. 
+Lógicamente, el script debe verificar que se pasa un parámetro y que el
+archivo facturas.csv existe. 
     
 28. Crea un script “facturas2” que muestre en pantalla los números de
 facturas que tiene dentro del archivo “facturas.csv” el cliente cuyo
@@ -71,8 +71,7 @@ nombre se pase como parámetro, los detalles de cada factura que tiene
 dentro del archivo “facturas.csv”.
 
     El script debería mostrar por cada factura del cliente su número de
-    factura, la base imponible, la cuota de IVA, y el total de la factura (Base
-    + cuota de IVA).
+    factura, la base imponible, la cuota de IVA, y el total de la factura (Base + cuota de IVA).
 
     Intenta que la información imprimida en pantalla se muestre de forma
     legible para el usuario que use el script (vamos, que no sea algo que
