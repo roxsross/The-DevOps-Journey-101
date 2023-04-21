@@ -34,6 +34,7 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
         * [Linux](./CLASE-2/linux.md)
         * [Comandos Basicos](./CLASE-2/comandos_linux.properties)
         * [Bash](./CLASE-2/00_tutorial_bash/readme.md)
+        * [Explicacion basica de bash](./CLASE-2/Explicacion-basica-bash.md)
         * [Challenge-01](./CLASE-2/05-example/reto1.md) 
         * [Challenge-02](./CLASE-2/05-example/reto2.md)
         * [Challenge-03](./CLASE-2/05-example/reto3.md)
