@@ -1,0 +1,51 @@
+
+body{
+  font-size: 20px;
+  margin-bottom: 350px;
+}
+#cabecera
+{
+    background: #006080;
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.5);
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+}
+#cabecera #logo
+{
+    width: 20px;
+    vertical-align: middle;
+}
+#container
+{
+    width: 70%;
+    padding: 0;
+    text-align: left;
+    border: 1px solid #DDD;
+    margin: 0 auto;
+}
+#footer
+{
+    background: #006080;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
+h1,h2,h3{
+  color: #0275d8;
+}
+
+.main-container{
+  margin-top: 50px;
+}
+
+.solucion{
+  display: none;
+}
+
+img{
+  margin-bottom: 20px;
+}
+
+

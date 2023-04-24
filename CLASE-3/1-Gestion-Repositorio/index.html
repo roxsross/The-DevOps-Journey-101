@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta autor="RoxsRoss">
+    <title>Ejercicios de creación y actualización de repositorios</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/estilo.css">
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="cabecera">
+          <img id="logo"
+              src="https://cdn2.iconfinder.com/data/icons/seo-and-website/100/SEO_blog_optimation_article-64.png" />
+          Challenge #2:
+          <span id="tagline">Git y Github</span>
+      </div>
+    <div class="container main-container">
+      <h1>Tarea práctica #1: <small>Creación y actualización de repositorios</small></h1>
+      <hr>
+      <p>
+        Siga las instrucciones indicadas, si no recuerda una instrucción presione el botón de <strong class="text-primary">Ayuda</strong>
+      </p>
+
+      <h3># 1</h3>
+      <p>
+        Configurar Git definiendo el nombre del usuario, el correo electrónico y activar el coloreado de la salida. Mostrar la configuración final.
+
+        <div class="solucion">
+          <pre>
+            $ git config --global user.name "Your-Full-Name"
+            $ git config --global user.email "your-email-address"
+            $ git config --global color.ui auto
+            $ git config --list
+          </pre>
+      </div>
+      <button type="button" class="btn btn-primary">Ayuda</button>
+    </p>
+    <hr>
+
+      <h3># 2</h3>
+      <p>
+        Crear un repositorio nuevo con el nombre libro y mostrar su contenido.
+        <div class="solucion">
+            <pre>
+              $ mkdir libro
+              $ cd libro
+              $ git init
+              $ ls -la
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+
+      <h3># 3</h3>
+      <p>
+        Comprobar el estado del repositorio. Crear un fichero <kbd>indice.txt</kbd> con el siguiente contenido:, ingrese el siguiente contenido:
+        <br>
+        <pre>
+          # Información
+          Capítulo 1: Introducción a Git
+          Capítulo 2: Flujo de trabajo básico
+          Capítulo 3: Repositorios remotos
+        </pre>
+        <p>
+          <ul>
+            <li>Comprobar de nuevo el estado del repositorio.</li>
+            <li> Añadir el fichero a la zona de intercambio temporal.</li>
+              <li> Volver a comprobar una vez más el estado del repositorio.</li>
+          </ul>     
+          <br>
+          <div class="solucion">
+            <pre>
+              $ git status
+              $ cat > indice.txt
+              $ git status
+              $ git add indice.txt
+              $ git status
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 4</h3>
+      <p>
+        Realizar un commit de los últimos cambios con el mensaje “Añadido índice del libro.” y ver el estado del repositorio.
+        <br>
+
+        <div class="solucion">
+          <pre>
+            $ git commit -m "Añadido índice del libro."
+            $ git status
+          </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+
+      <h3># 5</h3>
+      <p>
+        Cambiar el fichero <kbd>indice.txt</kbd> para que contenga lo siguiente:
+        <pre>
+          # Información
+          Capítulo 1: Introducción a Git
+          Capítulo 2: Flujo de trabajo básico
+          Capítulo 3: Gestión de ramas
+          Capítulo 4: Repositorios remotos
+        </pre>
+        <ul>
+          <li>Mostrar los cambios con respecto a la última versión guardada en el repositorio.</li>
+          <li>Hacer un commit de los cambios con el mensaje “Añadido capítulo 3 sobre gestión de ramas”</li>
+        </ul>
+        <br>
+
+        <div class="solucion">
+          <pre>
+            $ cat > indice.txt
+            Capítulo 1: Introducción a Git
+            Capítulo 2: Flujo de trabajo básico
+            Capítulo 3: Gestión de ramas
+            Capítulo 4: Repositorios remotos
+            Ctrl+D
+            $ git diff
+            $ git add indice.txt
+            $ git commit -m "Añadido capítulo 3 sobre gestión de ramas"
+            </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 6</h3>
+      <p>
+        <ul>
+          <li>Mostrar los cambios de la última versión del repositorio con respecto a la anterior.</li>
+          <li>Cambiar el mensaje del último commit por “Añadido capítulo 3 sobre gestión de ramas al índice.”</li>
+          <li>Volver a mostrar los últimos cambios del repositorio.</li>
+        </ul>
+        <br>
+
+        <div class="solucion">
+          <pre>
+            $ git show
+            $ git commit --amend -m "Añadido capítulo 3 sobre gestión de ramas al índice."
+            $ git show
+            </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3>Excelente, llego al final del ejercicio</h3>
+      <br>
+      <div id="footer">
+        <img height="50" src="https://roxs.295devops.com/static/media/Upstream-8.fd5001b0a762ac84490c.png" alt="RoxsRoss">
+        <a href="https://roxs.295devops.com" style="color: white">By RoxsRoss</a>
+      </div>
+    </div>
+
+
+    <script src="assets/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+
+  </body>
+</html>
