@@ -77,9 +77,8 @@ sudo systemctl status apache2
 ```
 sudo apt install git -y
 git clone https://github.com/roxsross/The-DevOps-Journey-101.git
-cd The-DevOps-Journey-101/CLASE-2/
-cp -r lamp-app-ecommerce/* /var/www/html/
-mv index.html index.html.bkp
+cp -r The-DevOps-Journey-101/CLASE-02/lamp-app-ecommerce/* /var/www/html/
+mv /var/www/html/index.html /var/www/html/index.html.bkp
 ```
 
 5. Actualizar index.php
