@@ -44,12 +44,10 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
         * [Ejercicios-4](./CLASE-02/ejercicios-scripts-linux-4.md)    
 
   1. Sistema de Control de Version
-        * [Git]()
-        * [Comandos Basicos]()
-        * [Git DevOps]()
-        * [Challenge-01]() 
-        * [Challenge-02]()
-        * [Challenge-03]()  
+        * [Git](./CLASE-03/00-git-terminal-basico/00-configuracion.md)
+        * [Comandos Basicos](./CLASE-03/00-git-terminal-basico/01-clonando-repo.md)
+        * [Git DevOps](./CLASE-03/00-git-terminal-basico/05-ejercicio.md)
+        * [Challenge-01](./CLASE-03/Ejercicios-github-bash/README.md) 
 
   1. Docker
         * [Contenedores]()
