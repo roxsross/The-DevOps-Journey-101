@@ -45,7 +45,7 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
 
   1. Sistema de Control de Version
         * [Git](./CLASE-03/00-git-terminal-basico/00-configuracion.md)
-        * [Comandos Basicos](./CLASE-03/00-git-terminal-basico/01-clonando-repo.md)
+        * [Comandos Basicos](./CLASE-03/github-git-cheat-sheet.pdf)
         * [Git DevOps](./CLASE-03/00-git-terminal-basico/05-ejercicio.md)
         * [Challenge-01](./CLASE-03/Ejercicios-github-bash/README.md) 
 
