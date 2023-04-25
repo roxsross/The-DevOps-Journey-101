@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta autor="RoxsRoss">
+    <title>Ejercicios de repositorios remotos</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/estilo.css">
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="cabecera">
+          <img id="logo"
+              src="https://cdn2.iconfinder.com/data/icons/seo-and-website/100/SEO_blog_optimation_article-64.png" />
+          Challenge #2:
+          <span id="tagline">Git y Github</span>
+      </div>
+    <div class="container main-container">
+      <h1>Tarea práctica #4: <small>Repositorios remotos</small></h1>
+      <hr>
+      <p>
+        🔔 Para hacer estos ejercicios es necesario haber hecho antes los ejercicios <kbd>sobre ramas</kbd>
+        o bien hacer un clon del repositorio remoto <kbd>https://github.com/roxsross/git-exercises</kbd> 
+        mediante la siguiente secuencia de comandos:
+      </p>
+      <p>
+        Siga las instrucciones indicadas, si no recuerda una instrucción presione el botón de <strong class="text-primary">Ayuda</strong>
+      </p>
+      <pre>
+        $ git clone https://github.com/roxsross/git-exercises
+        $ cd git-exercises
+      </pre>
+      <h3># 1</h3>
+      <p>
+        <ul>
+          <li>Crear un nuevo repositorio público en GitHub con el nombre <kbd>git-challenge</kbd>.</li>
+          <li>Añadirlo al repositorio local del libro.</li>
+          <li>Mostrar todos los repositorios remotos configurados.</li>
+        </ul>
+        <div class="solucion">
+          <pre>
+            # Crear el repositorio en GitHub y copiar su url con protocolo https.
+            > git remote add github url
+            > git remote -v
+          </pre>
+      </div>
+      <button type="button" class="btn btn-primary">Ayuda</button>
+    </p>
+    <hr>
+
+      <h3># 2</h3>
+      <p>
+      <ul>
+        <li> Añadir los cambios del repositorio local al repositorio remoto de GitHub.</li>
+        <li> Acceder a GitHub y comprobar que se han subido los cambios mostrando el historial de versiones.</li>
+      </ul>  
+        <div class="solucion">
+            <pre>
+              >git push github master
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 3</h3>
+      <p>
+      <ul>
+        <li>Colaborar en el repositorio remoto git-challenge de otro usuario.</kbd></li>
+        <li>Clonar su repositorio git-challenge.</li>
+        <li>Añadir el fichero autores.txt que contenga el nombre del usuario y su correo electrónico.</li>
+        <li>Añadir los cambios a la zona de intercambio temporal.</li>
+        <li>Hacer un commit con el mensaje “Añadido autor.”</li>
+        <li>Subir los cambios al repositorio remoto.</li>
+      </ul>  
+        <div class="solucion">
+            <pre>
+              # Entrar en GigHub en el proyecto git-challenge del que seamos colaboradores y copiar la url.
+              > git clone url
+              > cat > autores.txt
+              # Escribir el nombre del autor y su correo.
+              Ctrl+D
+              > git add .
+              > git commit -m "Añadido autor."
+              > git push origin master.
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 4</h3>
+      <p>
+        <ul>
+          <li>Hacer una bifurcación del repositorio remoto roxsross/git-exercises en GitHub.</li>
+          <li>Clonar el repositorio creado en la cuenta de GitHub del usuario.</li>
+          <li>Crear una nueva rama autoria y activarla.</li>
+          <li>Añadir el nombre del usuario y su correo al fichero autores.txt.</li>
+          <li>Añadir los cambios a la zona de intercambio temporal.</li>
+          <li>Hacer un commit con el mensaje “Añadido nuevo autor.”</li>
+          <li>Subir los cambios de la rama autoria al repositorio remoto en GitHub.</li>
+          <li>Hacer un Pull Request de los cambios en la rama autoria.</li>
+        </ul>  
+
+        <div class="solucion">
+          <pre>
+            # Hacer el fork del repositorio roxsross/git-exercises en GitHub y copiar la url del repositorio creado en la cuenta de GitHub del usuario.
+            > git clone url
+            > git checkout -b autoria
+            # Editar con nano el fichero autores.txt y añadir el nombre y el correo electrónico del usuario en una nueva línea.
+            > git commit -am "Añadido nuevo autor."
+            > git push origin autoria
+            # Ir al repositorio remoto en GitHub y hacer clic en el botón Compare & Pull Request y después completar la solicitud haciendo clic en el botón Create Pull Request.
+          </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3>Excelente, llego al final del ejercicio</h3>
+      <br>
+      <div id="footer">
+        <img height="50" src="https://roxs.295devops.com/static/media/Upstream-8.fd5001b0a762ac84490c.png" alt="RoxsRoss">
+        <a href="https://roxs.295devops.com" style="color: white">By RoxsRoss</a>
+      </div>
+    </div>
+
+    <script src="assets/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+
+  </body>
+</html>

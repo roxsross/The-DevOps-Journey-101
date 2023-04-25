@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta autor="RoxsRoss">
+    <title>Ejercicios de manejo del historial de cambios</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/estilo.css">
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="cabecera">
+          <img id="logo"
+              src="https://cdn2.iconfinder.com/data/icons/seo-and-website/100/SEO_blog_optimation_article-64.png" />
+          Challenge #2:
+          <span id="tagline">Git y Github</span>
+      </div>
+    <div class="container main-container">
+      <h1>Tarea práctica #2: <small>Manejo del historial de cambios</small></h1>
+      <hr>
+      <p>
+        🔔 Para hacer estos ejercicios es necesario haber hecho antes los ejercicios de <kbd>creación y actualización de repositorios </kbd>
+        o bien hacer un clon del repositorio remoto <kbd>https://github.com/roxsross/git-exercises</kbd> 
+        mediante la siguiente secuencia de comandos:
+      </p>
+      <p>
+        Siga las instrucciones indicadas, si no recuerda una instrucción presione el botón de <strong class="text-primary">Ayuda</strong>
+      </p>
+      <pre>
+        $ git clone https://github.com/roxsross/git-exercises
+        $ cd git-exercises
+      </pre>
+      <h3># 1</h3>
+      <p>
+        <ul>
+          <li>Mostrar el historial de cambios del repositorio.</li>
+          <li> Crear la carpeta capitulos y crear dentro de ella el fichero <kbd>capitulo1.txt</kbd> con el siguiente texto:</li>
+          <br>
+          <pre>
+            Git es un sistema de control de versiones ideado por Linus Torvalds.
+          </pre>
+          <li> Añadir los cambios a la zona de intercambio temporal.</li>
+          <li> Hacer un commit de los cambios con el mensaje “Añadido capítulo 1.”</li>
+          <li> Volver a mostrar el historial de cambios del repositorio.</li>
+        </ul>  
+
+        <div class="solucion">
+          <pre>
+            $ git log
+            $ mkdir capitulos
+            $ cat > capitulos/capitulo1.txt
+            Git es un sistema de control de versiones ideado por Linus Torvalds.
+            Ctrl+D
+            $ git add .
+            $ git commit -m "Añadido capítulo 1."
+            $ git log
+          </pre>
+      </div>
+      <button type="button" class="btn btn-primary">Ayuda</button>
+    </p>
+    <hr>
+
+      <h3># 2</h3>
+      <p>
+      <ul>
+        <li>Crear el fichero <kbd>capitulo2.txt</kbd> en la carpeta <kbd>capitulos</kbd> con el siguiente texto</li>
+        <br>
+        <pre>
+          El flujo de trabajo básico con Git consiste en: 
+          1- Hacer cambios en el repositorio. 
+          2- Añadir los cambios a la zona de intercambio temporal. 
+          3- Hacer un commit de los cambios.
+        </pre>
+        <li> Añadir los cambios a la zona de intercambio temporal.</li>
+        <li> Hacer un commit de los cambios con el mensaje “Añadido capítulo 2.”</li>
+        <li> Mostrar las diferencias entre la última versión y dos versiones anteriores.</li>
+      </ul>  
+        <div class="solucion">
+            <pre>
+              $ cat > capitulos/capitulo2.txt
+              El flujo de trabajo básico con Git consiste en:
+              1- Hacer cambios en el repositorio.
+              2- Añadir los cambios a la zona de intercambio temporal.
+              3- Hacer un commit de los cambios.
+              Ctrl+D
+              $ git add .
+              $ git commit -m "Añadido capítulo 2."
+              $ git diff HEAD~2..HEAD
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 3</h3>
+      <p>
+      <ul>
+        <li>Crear el fichero <kbd>capitulo3.txt</kbd> en la carpeta <kbd>capitulos</kbd> con el siguiente texto</li>
+        <br>
+        <pre>
+          Git permite la creación de ramas lo que permite 
+          tener distintas versiones del mismo proyecto y 
+          trabajar de manera simultanea en ellas.
+        </pre>
+        <li> Añadir los cambios a la zona de intercambio temporal.</li>
+        <li> Hacer un commit de los cambios con el mensaje “Añadido capítulo 3.”</li>
+        <li> Mostrar las diferencias entre la primera y la última versión del repositorio.</li>
+      </ul>  
+        <div class="solucion">
+            <pre>
+              $ cat > capitulos/capitulo3.txt
+              Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
+              Ctrl+D
+              $ git add .
+              $ git commit -m "Añadido capítulo 3."
+              $ git log
+              $ git diff &lt;codigo hash de la primera version>..HEAD
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 4</h3>
+      <p>
+        <ul>
+          <li>Añadir al final del fichero <kbd>indice.txt</kbd> la siguiente línea:</li>
+          <br>
+          <pre>
+            Capítulo 5: Conceptos avanzados
+          </pre>
+          <li> Añadir los cambios a la zona de intercambio temporal.</li>
+          <li> Hacer un commit de los cambios con el mensaje “Añadido capítulo 5 al índice.”.</li>
+          <li> Mostrar quién ha hecho cambios sobre el fichero <kbd>indice.txt</kbd></li>
+        </ul>  
+
+        <div class="solucion">
+          <pre>
+            $ echo "Capítulo 5: Conceptos avanzados" >> indice.txt
+            $ git add .
+            $ git commit -m "Añadido capítulo 5 al índice."
+            $ git annotate indice.txt
+          </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3>Excelente, llego al final del ejercicio</h3>
+      <br>
+      <div id="footer">
+        <img height="50" src="https://roxs.295devops.com/static/media/Upstream-8.fd5001b0a762ac84490c.png" alt="RoxsRoss">
+        <a href="https://roxs.295devops.com" style="color: white">By RoxsRoss</a>
+      </div>
+    </div>
+
+
+    <script src="assets/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+
+  </body>
+</html>
