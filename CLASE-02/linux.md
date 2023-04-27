@@ -35,7 +35,7 @@ Muchas Herramientas poderosas DevOps usan Linux como base integral de su tecnolo
 
 **Kubernetes:** El ambiente de trabajo de Kubernetes que sirve para llevar a cabo la orquestación de contenedores usa Linux de manera casi nativa. En cambio, para poder implementar estos mismos ambientes de trabajos en otras plataformas se requiere de más configuraciones y preparación adicionales.
 
-**Ansible y Puppet:** Tanto Ansible como Puppet, y otras plataformas DevOps que se usan para realizar configuraciones u operaciones masivas en cientos o miles de servers en paralelo mediante IaaS (Infrastructure as a Code en inglés), piden en sus requerimientos que las máquinas principales encargadas de llevar a cabo los despliegues de configuraciones masivas sean servidores Linux exclusivamente, ningún otro sistema operativo es aceptado. El despliegue de configuraciones u operaciones se puede hacer en nodos de diferentes sistemas operativos, pero las máquinas que tienen el rol de Controladores o Masters solo pueden recaer en servers Linux.
+**Ansible y Puppet:** Tanto Ansible como Puppet, y otras plataformas DevOps que se usan para realizar configuraciones u operaciones masivas en cientos o miles de servers en paralelo mediante IaaS (Infrastructure as a service en inglés), piden en sus requerimientos que las máquinas principales encargadas de llevar a cabo los despliegues de configuraciones masivas sean servidores Linux exclusivamente, ningún otro sistema operativo es aceptado. El despliegue de configuraciones u operaciones se puede hacer en nodos de diferentes sistemas operativos, pero las máquinas que tienen el rol de Controladores o Masters solo pueden recaer en servers Linux.
 
 ### Distribuciones de Linux más apropiadas para DevOps
 
