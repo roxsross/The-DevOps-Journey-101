@@ -46,7 +46,7 @@ En base a estas vertientes se han dado Distribuciones de Linux que se derivan de
 ---
 # Recursos
 
-- [00_tutorial_bash](./00_tutorial_bash/readme.md)
+- [00_tutorial_bash](./00_tutorial_bash/)
 - [01-entornos-linux](./01-entornos-linux/00-sistema-de-ficheros.md)
 - [02-trabajando-con-la-cli](./02-trabajando-con-la-cli/00-comandos-basicos.md)
 - [03-network-connectivity](./03-network-connectivity/00-comandos-de-red.md)
