@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta autor="RoxsRoss">
+    <title>Ejercicios de gestión de ramas</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/estilo.css">
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="cabecera">
+          <img id="logo"
+              src="https://cdn2.iconfinder.com/data/icons/seo-and-website/100/SEO_blog_optimation_article-64.png" />
+          Challenge #2:
+          <span id="tagline">Git y Github</span>
+      </div>
+    <div class="container main-container">
+      <h1>Tarea práctica #3: <small>Manejo del historial de cambios</small></h1>
+      <hr>
+      <p>
+        🔔 Para hacer estos ejercicios es necesario haber hecho antes los ejercicios de <kbd>historial de cambios</kbd>
+        o bien hacer un clon del repositorio remoto <kbd>https://github.com/roxsross/git-exercises</kbd> 
+        mediante la siguiente secuencia de comandos:
+      </p>
+      <p>
+        Siga las instrucciones indicadas, si no recuerda una instrucción presione el botón de <strong class="text-primary">Ayuda</strong>
+      </p>
+      <pre>
+        $ git clone https://github.com/roxsross/git-exercises
+        $ cd git-exercises
+      </pre>
+      <h3># 1</h3>
+      <p>
+        Crear una nueva rama <kbd>bibliografia</kbd> y mostrar las ramas del repositorio.
+        <div class="solucion">
+          <pre>
+            $ git branch bibliografia
+            $ git branch -av
+          </pre>
+      </div>
+      <button type="button" class="btn btn-primary">Ayuda</button>
+    </p>
+    <hr>
+
+      <h3># 2</h3>
+      <p>
+      <ul>
+        <li>Crear el fichero <kbd>capitulos/capitulo4.txt</kbd> y añadir el texto siguiente</li>
+        <br>
+        <pre>
+          En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+        </pre>
+        <li> Añadir los cambios a la zona de intercambio temporal.</li>
+        <li> Hacer un commit con el mensaje “Añadido capítulo 4.”</li>
+        <li> Mostrar la historia del repositorio incluyendo todas las ramas.</li>
+      </ul>  
+        <div class="solucion">
+            <pre>
+              > cat > capitulos/capitulo4.txt
+              En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+              Ctrl+D
+              > git add .
+              > git commit -m "Añadido capítulo 4."
+              > git log --graph --all --oneline
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 3</h3>
+      <p>
+      <ul>
+        <li>Cambiar a la rama <kbd>bibliografia</kbd></li>
+        <li>Crear el fichero <kbd>bibliografia.txt</kbd> y añadir la siguiente referencia</li>
+        <br>
+        <pre>
+          Chacon, S. and Straub, B. Pro Git. Apress.
+        </pre>
+        <li> Añadir los cambios a la zona de intercambio temporal.</li>
+        <li> Hacer un commit con el mensaje "Añadida primera referencia bibliográfica."</li>
+        <li> Mostrar la historia del repositorio incluyendo todas las ramas.</li>
+      </ul>  
+        <div class="solucion">
+            <pre>
+              > git checkout bibliografia
+              > cat > bibliografia.txt
+              - Chacon, S. and Straub, B. Pro Git. Apress.
+              Ctrl+D
+              > git add .
+              > git commit -m "Añadida primera referencia bibliográfica."
+              > git log --graph --all --oneline
+              </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+      <h3># 4</h3>
+      <p>
+        <ul>
+          <li>Fusionar la rama <kbd>bibliografia</kbd> con la rama <kbd>master</kbd></li>
+          <li> Mostrar la historia del repositorio incluyendo todas las ramas.</li>
+          <li> Eliminar la rama <kbd>bibliografia</kbd></li>
+          <li> Mostrar de nuevo la historia del repositorio incluyendo todas las ramas</li>
+        </ul>  
+
+        <div class="solucion">
+          <pre>
+            > git checkout master
+            > git merge bibliografia
+            > git log --graph --all --oneline
+            > git branch -d bibliografia
+            > git log --graph --all --oneline
+          </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+    <h3># 5</h3>
+      <p>
+        <ul>
+          <li>Crea la rama <kbd>bibliografia</kbd></li>
+          <li>Cambiar a la rama <kbd>bibliografia</kbd> </li>
+          <li>Cambiar el fichero <kbd>bibliografia.txt</kbd> para que contenga las siguientes referencias:</li>
+          <pre>
+            Scott Chacon and Ben Straub. Pro Git. Apress.
+            Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)
+          </pre>
+          <li>Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Añadida nueva referencia bibliográfica.”</li>
+          <li>Cambiar a la rama <kbd>master</kbd> </li>
+          <li>Cambiar el fichero <kbd>bibliografia.txt</kbd> para que contenga las siguientes referencias:</li>
+          <pre>
+            Chacon, S. and Straub, B. Pro Git. Apress.
+            Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+          </pre>       
+          <li>Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Añadida nueva referencia bibliográfica.” </li>
+          <li>Fusionar la rama <kbd>bibliografia</kbd> con la rama <kbd>master</kbd>.</li>
+          <li>Resolver el conflicto dejando el fichero <kbd>bibliografia.txt</kbd> con las referencias:</li>
+          <pre>
+            Chacon, S. and Straub, B. Pro Git. Apress.
+            Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+            Hodson, R. Ry’s Git Tutorial. Smashwords (2014)
+          </pre>
+          <li>Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Resuelto conflicto de bibliografía.” </li> 
+          <li>Mostrar la historia del repositorio incluyendo todas las ramas.</li> 
+
+        </ul>  
+
+        <div class="solucion">
+          <pre>
+            > git branch bibliografia
+            > git checkout bibliografia
+            > cat > bibliografia.txt
+            - Scott Chacon and Ben Straub. Pro Git. Apress.
+            - Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)
+            Ctrl+D
+            > git commit -a -m "Añadida nueva referencia bibliográfica."
+            > git checkout master
+            > cat > bibliografia.txt
+            - Chacon, S. and Straub, B. Pro Git. Apress.
+            - Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.
+            Ctrl+D
+            > git commit -a -m "Añadida nueva referencia bibliográfica."
+            > git merge bibliografia
+            > git nano bibliografia
+            # Hacer los cambios indicados en el fichero
+            > git commit -a -m "Solucionado conflicto bibliografía."
+            > git log --graph --all --oneline
+          </pre>
+        </div>
+        <button type="button" class="btn btn-primary">Ayuda</button>
+      </p>
+      <hr>
+
+
+      <h3>Excelente, llego al final del ejercicio</h3>
+      <br>
+      <div id="footer">
+        <img height="50" src="https://roxs.295devops.com/static/media/Upstream-8.fd5001b0a762ac84490c.png" alt="RoxsRoss">
+        <a href="https://roxs.295devops.com" style="color: white">By RoxsRoss</a>
+      </div>
+    </div>
+
+
+    <script src="assets/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+
+  </body>
+</html>
