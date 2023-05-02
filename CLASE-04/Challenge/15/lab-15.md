@@ -4,7 +4,7 @@
 Jugar al buscaminas es nuestra pasión. 
 ¡Por eso nos esforzamos por convertirlo en el mejor juego del mundo!
 
-¡Selecciona una dificultad para desafiarte a ti mismo y disfruta del juego!
+¡La Dificultad es Aleatoria para desafiarte a ti mismo y disfruta del juego!
 
 Usamos JavaScript 
 
