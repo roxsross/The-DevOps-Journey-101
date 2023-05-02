@@ -36,7 +36,7 @@ Realiza un merge de tu rama "generarlipsum" a la rama principal de tu repositori
 * echo
 * wc
 * man {comando}
-* curl cheat.sh/{comando}
+
 
 #### Salida
 ```
