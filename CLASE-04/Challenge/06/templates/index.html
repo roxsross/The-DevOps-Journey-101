@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        background: black;
+        color: white;
+      }
+      div.container {
+        max-width: 500px;
+        margin: 100px auto;
+        padding: 10px;
+        text-align: center;
+      }
+      h3 {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Your random pokemon: {{ pokemon.name }}</h3>
+      <img src="{{ pokemon.image }}" />
+    </div>
+  </body>
+</html>

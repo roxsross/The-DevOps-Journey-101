@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+}
+
+code {
+  font-family: 'Roboto Black', arial;
+}
+.swal-text {
+  font-family: 'Roboto Black', arial;
+  
+}

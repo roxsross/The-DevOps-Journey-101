@@ -1,0 +1,23 @@
+{
+  "name": "@roxsross/nodedb",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "jest",
+    "migrate": "node ./bin/migrate.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "package.json": "^2.0.1",
+    "pg": "^8.7.3",
+    "pm2": "^5.2.0",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
