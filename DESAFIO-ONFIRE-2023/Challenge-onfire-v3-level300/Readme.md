@@ -1,6 +1,6 @@
-### Challenge-onfire-v2-level300
+### Challenge-onfire-v3-level300
 
-La empresa ZERO Technology, solicita al Equipo de DevOps Trainer, la contenerizacion de su aplicacion "Products DevOp v2" en la que incluye:
+La empresa ZERO Technology, solicita al Equipo de DevOps Trainer, la contenerizacion de su aplicacion "Products DevOp v3" en la que incluye:
 
 ## Instrucciones:
 1. Forkear el proyecto desde github repository
