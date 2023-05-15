@@ -1,0 +1,101 @@
+
+services:
+  react:
+    image: node:lts-bullseye
+    build:
+        context: ./frontend/app
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      HOST: "0.0.0.0"
+  database:
+    image: postgres:14.2-bullseye
+    volumes:
+      - beta-data:/var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_MULTIPLE_DATABASES=inventory,sales,service
+      - POSTGRES_PASSWORD=test-databases
+    ports:
+      - 15432:5432
+  inventory-api:
+    build:
+      context: ./inventory/api
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "8100:8000"
+    volumes:
+      - ./inventory/api:/app
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgres://inventory:password@database:5432/inventory
+      WAIT_HOSTS: database:5432
+      WAIT_TIMEOUT: 240
+      SECRET_KEY: "crear un secret key"
+  service-api:
+    build:
+      context: ./service/api
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./service/api:/app
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgres://service:password@database:5432/service
+      WAIT_HOSTS: database:5432
+      WAIT_TIMEOUT: 240
+      SECRET_KEY: "crear un secret key"
+  service-poller:
+    build:
+      context: ./service/poll
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ./service/poll:/app
+      - ./service/api/service_project:/app/service_project
+      - ./service/api/service_rest:/app/service_rest
+    depends_on:
+      - database
+      - service-api
+    environment:
+      DATABASE_URL: postgres://service:password@database:5432/service
+      WAIT_HOSTS: database:5432,service-api:8000
+      WAIT_TIMEOUT: 240
+      SECRET_KEY: "crear un secret key"
+  sales-api:
+    build:
+      context: ./sales/api
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "8090:8000"
+    volumes:
+      - ./sales/api:/app
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgres://sales:password@database:5432/sales
+      WAIT_HOSTS: database:5432
+      WAIT_TIMEOUT: 240
+      SECRET_KEY: "crear un secret key"
+  sales-poller:
+    build:
+      context: ./sales/poll
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ./sales/poll:/app
+      - ./sales/api/sales_project:/app/sales_project
+      - ./sales/api/sales_rest:/app/sales_rest
+    depends_on:
+      - database
+      - sales-api
+    environment:
+      DATABASE_URL: postgres://sales:password@database:5432/sales
+      WAIT_HOSTS: database:5432,sales-api:8000
+      WAIT_TIMEOUT: 240
+      SECRET_KEY: "crear un secret key"
+
+volumes:
+  beta-data:

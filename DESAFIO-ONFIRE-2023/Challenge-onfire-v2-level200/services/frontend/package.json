@@ -1,0 +1,11 @@
+{
+  "name": "@roxsross/challenge",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "serve ./"
+  },
+  "dependencies": {
+    "serve": "^11.3.0"
+  }
+}

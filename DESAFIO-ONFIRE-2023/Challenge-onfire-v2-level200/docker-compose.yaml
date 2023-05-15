@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  web:
+    build: services/frontend
+    ports:
+      - "5000:5000"
+    networks:
+      - frontend
+      - backend
+  reader:
+    build: services/reader
+    ports:
+      - "8081:8081"
+    networks:
+      - frontend
+  writer:
+    build: services/writer
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+  reids:
+    image: "redis:alpine"
+
+networks:
+  backend:
