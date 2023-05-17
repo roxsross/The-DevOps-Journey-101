@@ -1,7 +1,0 @@
-#!/bin/bash 
-#Ejemplo 7: Entrada de datos
-
-echo Por favor, introduzca su nombre 
-read nombre 
-echo "¡Hola $nombre!"
-exit 0
