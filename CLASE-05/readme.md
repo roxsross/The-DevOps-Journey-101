@@ -44,8 +44,11 @@ Si estás utilizando o considerando utilizar contenedores para hacer más eficie
 
 La gestión del ciclo de vida de los contenedores con Kubernetes utilizando sus implementaciones y operadores junto con un enfoque de DevOps permite que el desarrollo de software y las operaciones de TI se adapten para respaldar el canal de CI/CD. 
 
-### Material complementario
+### Material complementario y Herramientas
 
 - [100DaysOfKubernetes](https://100daysofkubernetes.io/)
 - [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-- [kubenetes from scratch by Elman ](./kubenetes%20from%20scratch.pdf)
+- [kubenetes from scratch by Elman ](./kubenetes-from-scratch.pdf)
+- [Validar Objetos de kubernetes con validkube](https://validkube.com/)
+- [Diseñar Arquitectura K8S con mingrammer ](https://diagrams.mingrammer.com/)
+- [Ejemplo usando mingrammer](https://diagrams.mingrammer.com/docs/getting-started/examples#exposed-pod-with-3-replicas-on-kubernetes)

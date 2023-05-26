@@ -37,3 +37,4 @@ Para superar el desafio deberás entregar en un unico repositorio de github en f
 1. Los archivos yaml que has creado.
 2. Una imagen donde se vea el acceso desde un navegador web a la aplicación usando la ip del nodo master y el puerto asignado al Service (**imagen1.jpg**).
 3. Una imagen donde se vea el acceso desde un navegador web a la aplicación usando el nombre que hemos configurado en el recurso Ingress (**imagen2.jpg**).
+4. Diseñar Arquitectura de objetos de kubernetes pueden usar [k8sviz](https://github.com/mkimuram/k8sviz)
