@@ -46,6 +46,6 @@ La gestión del ciclo de vida de los contenedores con Kubernetes utilizando sus 
 
 ### Material complementario
 
-[100DaysOfKubernetes](https://100daysofkubernetes.io/)
-[kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-[kubenetes from scratch by Elman ](./kubenetes%20from%20scratch.pdf)
+- [100DaysOfKubernetes](https://100daysofkubernetes.io/)
+- [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [kubenetes from scratch by Elman ](./kubenetes%20from%20scratch.pdf)
