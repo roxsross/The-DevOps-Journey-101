@@ -5,6 +5,9 @@
 
 Let's Chat _VERSION BETA_ es una aplicación que incluye un Frontend escrita en React y un Backend escrita en nodejs que utilizando una base de datos MongoDB nos posibilita la autenticación de usuarios y creación de salas de chats.
 
+[Codigo fuente backend](./LetsChat-MERN/backend/package.json)
+[Codigo fuente frontend](./LetsChat-MERN/frontend/package.json)
+
 Vamos a realiza el despliegue y acceso a esta aplicación teniendo en cuenta los siguientes aspectos:
 
 * La imagen deben construirla para lograr el despliegue de Let's Chat Frontend y Backend y para desplegar mongoDB utilizaremos la imagen `mongo`.
