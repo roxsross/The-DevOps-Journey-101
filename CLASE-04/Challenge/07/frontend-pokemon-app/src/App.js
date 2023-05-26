@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   getMorePokemon() {
-    let url_deploy_config = process.env.REACT_APP_URL_PRODUCTION;
+    let url_deploy_config = process.env.REACT_APP_URL_DEVELOPMENT;
     let url = url_deploy_config + "/api/v1/all_pokemons";
     fetch(url)
     .then(response => response.json())
