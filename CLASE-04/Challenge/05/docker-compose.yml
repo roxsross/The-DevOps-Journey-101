@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  challenge05-app:
+    build: ./src/app
+    container_name: service-flask-app
+    ports:
+      - 8000:8000
+    networks:
+      - challenge05
+
+  challenge05-consumer:
+    build: ./src/consumer
+    container_name: service-consumer
+    environment:  
+      - LOCAL=true  
+      - PYTHONUNBUFFERED=1
+    networks:
+      - challenge05
+
+networks:
+  challenge05:
