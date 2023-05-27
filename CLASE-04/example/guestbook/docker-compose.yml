@@ -1,0 +1,27 @@
+version: '3'
+services:
+  guestbook: 
+    image: roxsross12/guestbook
+    container_name: guestbook
+    restart: always
+    ports:
+      - 81:5000
+    depends_on:
+      - redis
+    networks:
+      - net_guestbook
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    networks:
+      - net_guestbook
+
+  #nginx-proxy jwilder/nginx-proxy
+
+  #ssl jrcs/letsencrypt-nginx-proxy-companion
+
+networks:
+  net_guestbook:
+    driver: bridge
