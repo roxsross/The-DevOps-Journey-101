@@ -1,0 +1,13 @@
+apiVersion: v1
+apiVersion: v1
+kind: Pod
+metadata:
+ name: pod-nginx
+ labels:
+   app: nginx
+   service: web
+spec:
+ containers:
+   - image: nginx:1.16
+     name: contenedor-nginx
+     imagePullPolicy: Always

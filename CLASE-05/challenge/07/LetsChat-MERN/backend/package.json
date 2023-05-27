@@ -1,0 +1,23 @@
+{
+  "name": "letschat-app",
+  "version": "beta-1.0.0",
+  "description": "Realtime chat app",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.4",
+    "nodemon": "^2.0.22",
+    "react-toastify": "^9.1.2"
+  }
+}

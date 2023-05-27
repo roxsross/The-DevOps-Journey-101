@@ -1,0 +1,90 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+KUBERNETES_VERSION = "1.26.0"
+CONTAINER_RUNTIME  = "containerd"
+CLUSTER_NODES      = "1"
+PRIVATE_NETWORK_IP = "172.20.128.2"
+
+$install_docker = <<SCRIPT
+#!/bin/bash
+
+if ! [ -x "$(command -v docker)" ]; then
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sudo sh ./get-docker.sh
+  sudo usermod -aG docker vagrant && newgrp docker
+fi
+SCRIPT
+
+$install_k9s = <<SCRIPT
+#!/bin/bash
+
+if ! [ -x "$(command -v k9s)" ]; then
+  curl -sS https://webinstall.dev/k9s | bash
+fi
+SCRIPT
+
+$install_kubectl = <<SCRIPT
+#!/bin/bash
+
+if ! [ -x "$(command -v kubectl)" ]; then
+  sudo apt-get update
+  sudo apt-get install -y apt-transport-https ca-certificates curl
+  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+  sudo apt-get update
+  sudo apt-get install -y kubectl
+fi
+SCRIPT
+
+$install_minikube = <<SCRIPT
+#!/bin/bash
+
+if ! [ -x "$(command -v minikube)" ]; then
+  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  echo 'alias tunnel="minikube tunnel --bind-address '${PRIVATE_NETWORK_IP}'"' >> ~/.bashrc
+  echo 'alias dashboard="(trap 'kill 0' SIGINT; minikube dashboard --url & kubectl proxy --port 9999 --address='0.0.0.0' --disable-filter=true)"' >> ~/.bashrc
+fi
+SCRIPT
+
+$starting_minikube = <<SCRIPT
+#!/bin/bash
+
+minikube start \
+  --memory max \
+  --driver docker \
+  --kubernetes-version v${KUBERNETES_VERSION} \
+  --container-runtime=${CONTAINER_RUNTIME} \
+  --nodes ${CLUSTER_NODES}
+
+# Enable addons
+minikube addons enable ingress
+minikube addons enable metrics-server
+SCRIPT
+
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/bionic64"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "minikube"
+    vb.cpus = 2
+    vb.memory = "4096"
+  end
+
+  config.vm.network :private_network, ip: PRIVATE_NETWORK_IP
+  config.vm.synced_folder ".", "/home/vagrant/syncd", disabled: false
+
+  config.vm.provision "shell", inline: $install_docker, reset: true, privileged: false
+  config.vm.provision "shell", inline: $install_k9s, reset: true, privileged: false
+  config.vm.provision "shell", inline: $install_kubectl, reset: true, privileged: false
+  config.vm.provision "shell", inline: $install_minikube, privileged: false, env: {
+    "PRIVATE_NETWORK_IP" => PRIVATE_NETWORK_IP
+  }
+  config.vm.provision "shell", inline: $starting_minikube, privileged: false, env: {
+    "KUBERNETES_VERSION" => KUBERNETES_VERSION,
+    "CONTAINER_RUNTIME"  => CONTAINER_RUNTIME,
+    "CLUSTER_NODES"      => CLUSTER_NODES
+  }
+end

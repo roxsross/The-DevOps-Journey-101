@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="RoxsRoss">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Guestbook</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Guestbook</h1>
+    </div>
+    {% if noredis %}
+    <div id="guestbook-entries">
+      <p>Waiting for database connection...</p>
+    </div>
+    {% endif %}
+
+    <div>
+      <form id="guestbook-form" action="/add" method="post">
+        <input autocomplete="off" id="guestbook-entry-content" name="info" type="text">
+        <input type="submit" value="Submit"/ id="guestbook-submit">
+      </form>
+    </div>
+    {% for elem in lista %}
+    <div id="guestbook-entries">
+      <p>{{elem}}</p>
+    </div>
+    {% endfor %}
+    <div id="footer">
+      <p>Docker/Kubernetes fundamentals | DevOps</p>
+      <p>@2023 by RoxsRoss</p>
+      <p>https://roxs.295devops.com</p>
+    </div>
+  </body>
+</html>
