@@ -9,8 +9,6 @@
     "test": "./node_modules/.bin/eslint ."
   },
   "keywords": [],
-  "author": "Gisela Torres",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
   },
