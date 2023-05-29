@@ -1,0 +1,196 @@
+:root {
+  /* --First: #112031; */
+  --First: #000000;
+  /* --Second: #394867; */
+  --Second: #222831;
+  --Third: #9BA4B5;
+  --Fourth: #F1F6F9;
+  --LiteThird: #9ba4b54d;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--First);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--Second);
+}
+
+
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid white;
+}
+
+body {
+  font-family: 'Kalam', cursive;
+  background-color: var(--First);
+  color: var(--Fourth);
+}
+
+/* Login and Register page */
+
+#Wrapper {
+  background-image: url('../public/Register_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#OpeningText {
+  font-family: 'Caveat', cursive;
+  color: white;
+}
+
+
+#Minor_Wrapper {
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.704);
+  border-radius: 5px;
+}
+
+#inpform label {
+  font-size: 1.1rem;
+  color: white;
+}
+
+#inpform input::placeholder {
+  color: rgba(220, 220, 220, 0.671);
+}
+
+#inpform input[type=text],
+#inpform input[type=password] {
+  background: none;
+  border: none;
+  border-radius: 0%;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+#inpform input[type=text]:focus,
+#inpform input[type=password]:focus {
+  border-bottom: 1px solid #0d6efd;
+}
+
+/* Home Page */
+
+.navbar {
+  background-color: var(--Second);
+}
+
+#sidebar {
+  background-color: var(--Second);
+  overflow-y: scroll;
+}
+
+.styled {
+  background-color: var(--First);
+  border: 1px solid var(--LiteThird);
+  color: var(--Fourth);
+}
+
+.styled::placeholder {
+  color: var(--Third);
+}
+
+.styled:focus {
+  background-color: var(--First);
+  border: 1px solid var(--LiteThird);
+  color: var(--Fourth);
+}
+
+.dropstart {
+  background-color: var(--Second);
+}
+
+.dropstart-btn {
+  background-color: var(--Fourth);
+}
+
+.dropdown-menu {
+  background-color: var(--Fourth);
+}
+
+.dropdown-menu>li>a:hover {
+  background-color: var(--Third);
+}
+
+.modal-content {
+  background-color: var(--Second);
+}
+
+.UserComponent {
+  background-color: var(--First);
+  border-radius: 5px;
+  color: var(--Third);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.UserComponent:hover {
+  background-color: var(--Fourth);
+  color: var(--First);
+}
+
+/* mychats page */
+
+.MyChats {
+  background-color: var(--Second);
+  border: 2px solid var(--Second);
+  border-radius: 5px;
+  height: 85.3vh;
+  overflow-y: scroll;
+}
+
+.ChatUser {
+  background-color: var(--First);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ChatUser:hover {
+  background-color: var(--Fourth);
+  color: var(--First);
+}
+
+#CreateGrpInp {
+  background-color: var(--First);
+  color: var(--Third);
+  border: 1px solid var(--LiteThird);
+}
+
+#CreateGrpInp:focus {
+  color: var(--Fourth);
+  border: 1px solid var(--Fourth);
+}
+
+.badge {
+  background-color: var(--Fourth);
+  color: var(--First);
+}
+
+.MessageBox {
+  background-color: var(--First);
+  overflow-y: hidden;
+  height: 100vh;
+}

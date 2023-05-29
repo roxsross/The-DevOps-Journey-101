@@ -1,0 +1,42 @@
+version: '3'
+services:
+  wordpress: 
+    image: wordpress
+    container_name: servidor_wp
+    restart: always
+    environment:
+      - WORDPRESS_DB_NAME=bd_wp
+      - WORDPRESS_DB_USER=user_wp
+      - WORDPRESS_DB_PASSWORD=pass_wp
+      - WORDPRESS_DB_HOST=servidor_mysql
+    ports:
+      - 80:80
+    depends_on:
+      - mysql
+    volumes:
+      - vol_wp:/var/www/html
+    networks:
+      - net_wp
+
+  mysql:
+    image: mariadb
+    container_name: servidor_mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=bd_wp
+      - MYSQL_USER=user_wp
+      - MYSQL_PASSWORD=pass_wp
+      - MYSQL_ROOT_PASSWORD=pass_wp
+    volumes:
+      - vol_mysql:/var/lib/mysql
+    networks:
+      - net_wp
+
+#volumenes
+volumes:
+  vol_mysql:
+  vol_wp:
+
+networks:
+  net_wp:
+    driver: bridge
