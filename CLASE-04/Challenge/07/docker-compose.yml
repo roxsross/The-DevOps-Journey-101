@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  challenge07-backend:
+    image: wyataco/challenge07-backend-pokemon-app:1.0
+    container_name: backend-pokemon-app
+    environment:
+      - PORT=8500
+    ports:
+      - 8000:8500
+    networks:
+      - challenge07
+
+  challenge07-front:
+    image: wyataco/challenge07-frontend-pokemon-app:1.0
+    container_name: frontend-pokemon-app
+    environment:  
+      - REACT_APP_URL_DEVELOPMENT=http://localhost:8000
+    ports:
+      - 3000:3000
+    networks:
+      - challenge07
+
+networks:
+  challenge07:
+    driver: bridge

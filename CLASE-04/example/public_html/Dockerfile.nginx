@@ -1,0 +1,6 @@
+FROM nginx:alpine
+#FROM ubuntu
+LABEL project=bootcamp
+#/usr/share/nginx/html
+COPY src/* /usr/share/nginx/html
+

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  challenge08-app:
+    build: ./
+    container_name: challenge08-app
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - challenge08-redis
+    networks:
+      - challenge08
+
+  challenge08-redis:
+    image: redis-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - challenge08
+
+networks:
+  challenge08:
+    driver: bridge

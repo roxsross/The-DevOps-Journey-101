@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   challenge05-app:
-    build: ./src/app
+    image: wyataco/challenge05-app:1.0
     container_name: service-flask-app
     ports:
       - 8000:8000
@@ -10,7 +10,7 @@ services:
       - challenge05
 
   challenge05-consumer:
-    build: ./src/consumer
+    image: wyataco/challenge05-consumer:1.0
     container_name: service-consumer
     environment:  
       - LOCAL=true  
