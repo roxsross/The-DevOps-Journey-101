@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: guestbook-ingress
+  labels:
+    app: guestbook
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /   
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: app.192.168.50.4.nip.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: guestbook
+            port: 
+              number: 80
