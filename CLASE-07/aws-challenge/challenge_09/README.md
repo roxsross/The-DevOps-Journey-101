@@ -20,7 +20,7 @@ c. En la orquestación del Step Functions, este workflow contendrá dos funcione
 
 <br>
 
-<img src=/challenge_09/Reto09.png>
+<img src=Reto09.png>
 
 <br>
 

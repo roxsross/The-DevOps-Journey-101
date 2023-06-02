@@ -20,7 +20,7 @@ a. Desplegar la siguiente arquitectura cloud, detallada en:
 
 <br>
 
-<img src=/challenge_04/Reto04.png>
+<img src=Reto04.png>
 
 <br>
 
