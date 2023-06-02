@@ -1,6 +1,7 @@
 # AWS Challenge Cortesia de Jorge Barreto
 
 ### **Autor:** Jorge Barreto | AWSx10 & AWS Community Builder | [LinkedIn](https://www.linkedin.com/in/jorgebarretoolivos/)
+### Repositorio Oficial [Github](https://github.com/jbarreto7991/aws-challenge)
 <br>
 
 **Objetivo:**
