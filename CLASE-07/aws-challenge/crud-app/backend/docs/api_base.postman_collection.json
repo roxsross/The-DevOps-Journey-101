@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "bf98a7d7-0582-4db4-97ac-fe5e90c916d0",
+		"name": "API - FullStack - MEVN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"user\": \"tony\",\n \"password\" : \"123456\",\n \"email\" : \"test@gmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"password\" : \"123456\",\n \"email\" : \"test@gmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWQiOiIyMDIwLTA4LTEwVDA0OjQ1OjMwLjY0MVoiLCJfaWQiOiI1ZjMwZDEyNmZkYzc1MzI1OWNkNGM3NjEiLCJ1c2VyIjoidG9ueSIsImVtYWlsIjoidGVzdDEyM0BnbWFpbC5jb20iLCJfX3YiOjB9LCJpYXQiOjE1OTcwMzQ3OTAsImV4cCI6MTU5NzM5NDc5MH0.zSXgXk3LVzEKveoOmiqqXTWLlGk2vQd4BY9oc5NOBX4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/v1/api/tasks/?skip=3&limit=6",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"tasks",
+						""
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "3"
+						},
+						{
+							"key": "limit",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWQiOiIyMDIwLTA1LTA0VDAzOjA3OjI0LjM5M1oiLCJfaWQiOiI1ZWFmODczMTg1YmI0NTVjZDg2NTQ0NDIiLCJ1c2VyIjoidG9ueSIsImVtYWlsIjoidGVzdDI1QGdtYWlsLmNvbSIsIl9fdiI6MH0sImlhdCI6MTU4ODU3MDI0MywiZXhwIjoxNTg4NTczODQzfQ.WBR1LKxYcUpaGfU1IkeFT8XzakQ77hrf0wqqdMCLz-k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"first task3\",\n\t\"description\" : \"description3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/v1/api/tasks/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWQiOiIyMDIwLTA1LTA0VDAzOjA3OjI0LjM5M1oiLCJfaWQiOiI1ZWFmODczMTg1YmI0NTVjZDg2NTQ0NDIiLCJ1c2VyIjoidG9ueSIsImVtYWlsIjoidGVzdDI1QGdtYWlsLmNvbSIsIl9fdiI6MH0sImlhdCI6MTU4ODU3MDI0MywiZXhwIjoxNTg4NTczODQzfQ.WBR1LKxYcUpaGfU1IkeFT8XzakQ77hrf0wqqdMCLz-k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"first task2\",\n\t\"description\" : \"description\",\n\t\"status\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/tasks/5eafa8e86035e539488b3d9c",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"5eafa8e86035e539488b3d9c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWQiOiIyMDIwLTA1LTA0VDAzOjA3OjI0LjM5M1oiLCJfaWQiOiI1ZWFmODczMTg1YmI0NTVjZDg2NTQ0NDIiLCJ1c2VyIjoidG9ueSIsImVtYWlsIjoidGVzdDI1QGdtYWlsLmNvbSIsIl9fdiI6MH0sImlhdCI6MTU4ODU3MDI0MywiZXhwIjoxNTg4NTczODQzfQ.WBR1LKxYcUpaGfU1IkeFT8XzakQ77hrf0wqqdMCLz-k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/api/tasks/5eafadf92b8e7d71ec1dd116",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"5eafadf92b8e7d71ec1dd116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWQiOiIyMDIwLTA1LTA0VDAzOjA3OjI0LjM5M1oiLCJfaWQiOiI1ZWFmODczMTg1YmI0NTVjZDg2NTQ0NDIiLCJ1c2VyIjoidG9ueSIsImVtYWlsIjoidGVzdDI1QGdtYWlsLmNvbSIsIl9fdiI6MH0sImlhdCI6MTU4ODU3MDI0MywiZXhwIjoxNTg4NTczODQzfQ.WBR1LKxYcUpaGfU1IkeFT8XzakQ77hrf0wqqdMCLz-k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/v1/api/tasks/5f30861dce2c360cb454610c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"tasks",
+						"5f30861dce2c360cb454610c"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

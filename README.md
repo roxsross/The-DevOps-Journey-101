@@ -100,13 +100,11 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
         * [Challenge-08](./CLASE-05/challenge/08/lab08.md)           
 
   1. AWS
-        * [Intro AWS]()
-        * [AWS S3]()
-        * [AWS EC2]()
-        * [AWS Lambda]()  
-        * [Challenge-01]() 
-        * [Challenge-02]()
-        * [Challenge-03]()   
+        * [Intro AWS](./CLASE-07/intro-aws/README.md)
+        * [Challenge-01](./CLASE-07/aws-challenge/challenge_01/README.md) 
+        * [Challenge-02](./CLASE-07/aws-challenge/challenge_02/README.md)
+        * [Challenge-03](./CLASE-07/aws-challenge/challenge_03/README.md)  
+        * Challenges **Autor:** Jorge Barreto | AWSx10 & AWS Community Builder | [LinkedIn](https://www.linkedin.com/in/jorgebarretoolivos/)
 
   1. Terraform
         * [Intro Terraform]()
