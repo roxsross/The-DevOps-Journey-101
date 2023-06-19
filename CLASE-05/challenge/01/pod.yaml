@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: pod-challenge01
+ labels:
+   app: challenge01
+   service: web
+spec:
+ containers:
+   - image: roxsross12/k8s_test_web:latest
+     name: contenedor-challenge01
