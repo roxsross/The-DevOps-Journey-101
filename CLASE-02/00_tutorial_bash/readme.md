@@ -78,5 +78,5 @@ service apache2 start
 echo "La aplicación ha sido desplegada correctamente y las migraciones de base de datos han sido ejecutadas."
 
 
-#Estos son solo ejemplos básicos y pueden requerir modificaciones dependiendo de tu entorno y las necesidades de tu #aplicación. Recuerda adaptar los scripts según las rutas de directorio, comandos y tecnologías que estés utilizando #en tu caso específico.
+#Estos son solo ejemplos básicos y pueden requerir modificaciones dependiendo de tu entorno y las necesidades de tu aplicación. Recuerda adaptar los scripts según las rutas de directorio, comandos y tecnologías que estés utilizando en tu caso específico.
 
