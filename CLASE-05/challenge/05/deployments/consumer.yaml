@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumer-challenge05
+  labels:
+    app: challenge05
+    service: consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: challenge05
+      service: consumer
+  template:
+    metadata:
+      labels:
+        app: challenge05
+        service: consumer
+    spec:
+      containers:
+      - name: container-consumer
+        image: wyataco/challenge05-consumer:1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80

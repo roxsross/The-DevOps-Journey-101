@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-challenge05
+  labels:
+    app: challenge05
+    service: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: challenge05
+      service: web
+  template:
+    metadata:
+      labels:
+        app: challenge05
+        service: web
+    spec:
+      containers:
+      - name: container-flask-app
+        image: wyataco/challenge05-app:1.0
+        imagePullPolicy: Never
+        ports:
+        - name: port-flask-app
+          containerPort: 8000
