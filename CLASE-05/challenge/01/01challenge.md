@@ -1,7 +1,7 @@
 # **Challenge01**
 
 > Resultados al realizar challenge 01 \
-[bash](./challenge01.sh)
+[bash](./01challenge.sh)
 
 ## **Resultados**
 
