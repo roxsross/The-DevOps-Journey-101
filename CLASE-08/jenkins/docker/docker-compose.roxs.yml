@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  docker:
+    container_name: docker
+    image: docker:dind
+    privileged: true
+    restart: always 
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - jenkins-docker-certs:/certs/client
+    environment:
+      DOCKER_TLS_CERTDIR: /certs
+  jenkins:
+    container_name: roxs-jenkins
+    restart: always 
+    depends_on:
+      - docker
+    image: roxsross12/jenkins:1.0.1
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - jenkins-docker-certs:/certs/client:ro
+    environment:
+      DOCKER_HOST: tcp://docker:2376
+      DOCKER_TLS_VERIFY: 1
+      DOCKER_CERT_PATH: /certs/client
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+volumes:
+  jenkins-data:
+  jenkins-docker-certs:
