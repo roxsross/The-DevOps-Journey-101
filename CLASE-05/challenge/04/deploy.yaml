@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-challenge04
+  labels:
+    app: challenge04
+    service: web
+spec:
+  revisionHistoryLimit: 5
+  strategy:
+    type: RollingUpdate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: challenge04
+      service: web
+  template:
+    metadata:
+      labels:
+        app: challenge04
+        service: web
+    spec:
+      containers:
+      - name: container-challenge04
+        image: roxsross12/k8s_test_web:v3
+        ports:
+        - name: portchallenge04
+          containerPort: 80
