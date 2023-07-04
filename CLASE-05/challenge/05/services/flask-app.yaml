@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-flask-app
+  labels:
+    app: challenge05
+spec:
+  type: NodePort
+  ports:
+  - name: flask-app
+    port: 80
+    targetPort: port-flask-app
+  selector:
+    app: challenge05
+    service: web

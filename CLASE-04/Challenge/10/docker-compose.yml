@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+
+  db:
+    image: postgres:12
+    container_name: challenge10-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret123
+      POSTGRES_DB: challenge10_database
+      PGDATA: /data/postgres
+    volumes:
+       - vol_postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - challenge10
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: challenge10-pgadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: secret123
+    volumes:
+      - vol_pgadmin:/var/lib/pgadmin
+    networks:
+      - challenge10
+
+volumes:
+  vol_postgres:
+  vol_pgadmin:
+
+networks:
+  challenge10:
+    driver: bridge
