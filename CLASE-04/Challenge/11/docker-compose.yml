@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  challenge11-web:
+    image: nginx:1.22.1
+    container_name: challenge11-web
+    volumes:
+      - ./lamp-app-ecommerce:/var/www/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - php
+    networks:
+      - challenge11
+
+  php:
+    build: .
+    container_name: challenge11-php
+    volumes:
+      - ./lamp-app-ecommerce:/var/www/html
+    depends_on:
+      - mariadb
+    networks:
+      - challenge11
+
+  mariadb:
+    image: mariadb:10.10
+    container_name: challenge11-db
+    environment:
+      MARIADB_DATABASE : ecomdb
+      MARIADB_USER : ecomuser
+      MARIADB_PASSWORD : ecompassword
+      MARIADB_ROOT_PASSWORD: ecompassword
+    volumes:
+      - ./script-load-db.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+    ports:
+      - 3306:3306
+    networks:
+      - challenge11
+
+networks:
+  challenge11:
+    driver: bridge
