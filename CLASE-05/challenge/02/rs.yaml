@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: challenge02
+      service: web
+  template:
+    metadata:
+      labels:
+        app: challenge02
+        service: web
+    spec:
+      containers:
+        - image: roxsross12/k8s_test_web:latest
+          name: container-web

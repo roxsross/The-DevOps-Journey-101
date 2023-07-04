@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-challenge03
+  labels:
+    app: challenge03
+    service: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: challenge03
+      service: web
+  template:
+    metadata:
+      labels:
+        app: challenge03
+        service: web
+    spec:
+      containers:
+      - name: container-challenge03
+        image: roxsross12/k8s_test_web:latest
